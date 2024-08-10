@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main ,#error{
+            display: none;
+        }
+       
+         #weather{
+            width: 90%;
+            max-width: 470px;
+            background: linear-gradient(135deg,#00feba,#5b548a);
+            color: #fff;
+            margin: 100px auto 0;
+            border-radius: 20px;
+            padding: 40px,35px;
+            text-align: center;
+
+        }
+        #search{
+            width: 90%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #search input{
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            color: #555;
+            padding: 5px 25px;
+            height: 30px;
+            border-radius: 30px;
+            flex: 1;
+            margin-right: 16px;
+            margin-left: 4px;
+            font-size: 18px;
+        }
+        #search button{
+            border: 0;
+            outline: 0;
+            background: #ebfffc;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            
+        }
+        #search button img{
+            width: 18px;
+
+        } 
+        #m1{
+            width: 170px;
+            margin-top: 30px;
+        }
+        #main h1{
+            font-size: 80px;
+            font-weight: 500;
+        }
+        #main h1{
+            font-size: 45px;
+            font-weight: 400;
+            margin-top: -10px;
+        }
+        #detail{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            margin-top: 50px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- outer start -->
+     <div id="weather">
+        <div id="search">
+            <input type="text" name="" id="">
+            <button onclick="weather()"><img src="img/search.png" alt=""></button>
+        </div>
+        <div id="main">
+            <img src="img/clear.png" alt="" id="m1">
+            <h1 id="temp">16℃</h1>
+            <h1 id="city">Delhi</h1>
+            <div id="detail">
+                <div class="col">
+                    <img src="img/humidity.png" alt="">
+                    <div>
+                        <p id="humidity">17%</p>
+                        <p>Humidity</p>
+                            
+                    </div>
+                </div>
+                <div class="col">
+                    <img src="img/wind.png" alt="">
+                    <div>
+                        <p id="wind">15km/hr</p>
+                        <p>wind</p>
+                            
+                    </div>
+                </div>
+
+            </div>
+            
+            
+
+        </div>
+        <div id="error">
+            <h3>Invalid city name</h3>
+        </div>
+     </div>
+    <!-- outer end -->
+     <script src="js/script.js"></script>
+    
+</body>
+</html>
+<!-- 
+https://api.openweathermap.org/data/2.5/weather? unit=metric&q=Delhi&appid=c2e89a6c508d87d608915ad1c08aa8f5 
+-->
